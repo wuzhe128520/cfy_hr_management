@@ -1,16 +1,48 @@
+.body {
+  background-color: #f8f8f8;
+}
 .noPaddingTb {
   padding-top: 0;
   padding-bottom: 0;
 }
+.container-fluid-addP {
+  padding-right: 45px;
+}
 li {
   list-style-type: none;
 }
+.side-menu-level2 {
+  padding-left: 37px;
+}
+.sidebar ul li a.active {
+  background-color: #eeeeee;
+}
+.sidebar-nav {
+  padding: 35px 0 35px 15px;
+}
+.main {
+  margin-top: 51px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: #fff;
+  border: 1px solid red;
+  border-left: 1px solid #e7e7e7;
+}
 @media (min-width: 768px) {
   .sidebar {
-    width: 250px;
+    width: 180px;
     position: absolute;
     top: 51px;
   }
+  .main {
+    margin-left: 180px;
+  }
+}
+#navMenu {
+  max-height: none;
+}
+#menu > li > a {
+  padding-left: 40px;
 }
 .navbar-top-links > li {
   display: inline-block;

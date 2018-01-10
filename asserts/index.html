@@ -10,8 +10,10 @@
         <meta name="description" content="畅飞扬人才档案馆">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="shortcut icon" href="../favicon.ico">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="js/plugins/metis-menu/metisMenu.min.css">
         <link rel="stylesheet" href="css/index.css">
         <!--[if lt IE 9]>
         <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -20,9 +22,10 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 7]>
+        <!--[if lt IE 9]>
             <p class="chromeframe">您使用的浏览器已经<strong>过时</strong>了！为了更好的体验，请 <a href="http://browsehappy.com/">升级</a>您的浏览器。</p>
         <![endif]-->
+        <!--导航 begin-->
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -37,68 +40,91 @@
                     </a>
                 </div>
                 <ul class="nav navbar-nav navbar-right navbar-top-links">
-                    <li><a href="javascript:void(0);">用户名：admin</a></li>
                     <li class="dropdown">
                         <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-user fa-fw"></i>
                             <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu">
+                            <li class="dropdown-header">用户名：admin</li>
                             <li><a href="javascript:void(0);">切换账号</a></li>
                             <li><a href="javascript:void(0);">退出</a></li>
                         </ul>
                     </li>
-                    <li><a href="javascript:void(0);"></a></li>
-                    <li><a href="javascript:void(0);"></a></li>
-                    <li><a href="javascript:void(0);"></a></li>
-                    <li><a href="javascript:void(0);"></a></li>
                 </ul>
             </div>
+            <!--侧边栏 begin-->
             <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse"  id="navMenu">
-                        <ul class="nav">
+                        <ul class="metismenu nav" id="menu">
                             <li>
-                                <a href="*.html">
+                                <a href="javascript:void(0);" id="menu-item-01" data-cfy-url="pages/one.html" data-cfy-nav="1,1" class="js-menu-item">
                                     模块一
                                 </a>
                             </li>
                             <li>
-                                <a href="*.html">
+                                <a href="javascript:void(0);" class="has-arrow" data-cfy-nav="1,1">
                                     模块二
-                                    <span class="fa fa-angle-left pull-right"></span>
-                                    <ul class="nav nav-second-level collapse">
-                                        <li>
-                                            <a href="#">子模块一</a>
-                                            <a href="#">子模块二</a>
-                                        </li>
-                                        <li></li>
-                                    </ul>
                                 </a>
+                                <ul class="nav side-menu-level2">
+                                    <li>
+                                        <a href="#"  id="menu-item-02" data-cfy-url="pages/two.html" class="js-menu-item">子模块一</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" id="menu-item-03">子模块二</a>
+                                    </li>
+                                </ul>
                             </li>
                             <li>
-                                <a href="*.html">
+                                <a href="javascript:void(0);" id="menu-item-04" data-cfy-url="pages/three.html" class="js-menu-item">
                                 模块三
-                                <span class="fa fa-angle-left pull-right fa-angle-down"></span>
                                 </a>
                             </li>
-                            <li><a href="*.html">模块四</a></li>
-                            <li><a href="*.html">模块五</a></li>
-                            <li><a href="*.html">模块六</a></li>
+                            <li><a href="javascript:void(0);" id="menu-item-05" >模块四</a></li>
+                            <li><a href="javascript:void(0);" id="menu-item-06">模块五</a></li>
+                            <li>
+                                <a href="javascript:void(0);" class="has-arrow">模块六</a>
+                                <ul class="nav side-menu-level2">
+                                    <li>
+                                        <a href="#" class="js-menu-item" id="menu-item-07">子模块一</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="js-menu-item" id="menu-item-08">子模块二</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
+            <!--侧边栏 end-->
         </nav>
+        <!--导航 end-->
         <main>
-            <aside>
-
-            </aside>
-            <section>
-
+            <section class="main-wrap">
+               <div class="main container-fluid" id="main">
+                    <div class="row">
+                        <div class="col-md-12">
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                            主要内容区域主要内容区域主要内容区域主要内容区域
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
         <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.0.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/plugins/metis-menu/metisMenu.min.js"></script>
         <script>
             $(function(){
                 $(window).resize(function(){
@@ -109,7 +135,17 @@
                         $('#navMenu').removeClass('collapse');
                     }
                 });
+                $('#menu').metisMenu();
+                $('#menu').on('click', '.js-menu-item', function(e){
+                    var templateUrl = $(this).data('cfyUrl');
+                    var menuId = this.id;
+                    console.log(menuId);
+                    if(templateUrl !== ''){
+                        $('#main').load(templateUrl + ' #content');
+                    }
+                });
             });
+            //记录当前导航的位置。一级索引、二级索引
         </script>
     </body>
 </html>
