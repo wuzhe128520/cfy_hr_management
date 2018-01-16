@@ -26,7 +26,7 @@
             <p class="chromeframe">您使用的浏览器已经<strong>过时</strong>了！为了更好的体验，请 <a href="http://browsehappy.com/">升级</a>您的浏览器。</p>
         <![endif]-->
         <!--导航 begin-->
-        <nav class="navbar navbar-default navbar-fixed-top">
+        <nav class="navbar navbar-default navbar-fixed-top noMarginB" id="topNav">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navMenu" aria-expanded="false">
@@ -121,31 +121,70 @@
                 </div>
             </section>
         </main>
+        <footer>
+
+        </footer>
         <script src="https://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.0.0.min.js"><\/script>')</script>
         <script src="js/vendor/bootstrap.min.js"></script>
         <script src="js/plugins/metis-menu/metisMenu.min.js"></script>
         <script>
             $(function(){
-                $(window).resize(function(){
+                function handleLoadAndResize() {
+                    //可视窗口小于768时，隐藏侧边导航栏
                     if($(this).width() < 768){
                         $('#navMenu').addClass('collapse');
-
                     } else {
                         $('#navMenu').removeClass('collapse');
                     }
+
+                    //设置主体内容的最小高度
+                    var winHeight = $(window).outerHeight(),
+                        navHeight = $("#topNav").outerHeight(),
+                        mainHeight = $("#main").outerHeight();
+                    console.log(winHeight,navHeight,mainHeight);
+                    if(winHeight - navHeight > mainHeight){
+                        $("#main").css('min-height', (winHeight - navHeight) + 'px');
+                    }
+                }
+                handleLoadAndResize();
+                $(window).on('resize', handleLoadAndResize);
+
+
+                $('#menu').metisMenu().on('show.metisMenu', function(event) {
+
+                    console.log('显示show');
+
+                }).on('shown.metisMenu', function(event) {
+                    console.log('显示shown');
+                    // do something…
+
+                }).on('hide.metisMenu', function(event) {
+                    console.log('隐藏hide');
+                    // do something…
+
+                }).on('hidden.metisMenu', function(event) {
+                    console.log('隐藏hidden');
+                    // do something…
+
                 });
-                $('#menu').metisMenu();
+
                 $('#menu').on('click', '.js-menu-item', function(e){
-                    var templateUrl = $(this).data('cfyUrl');
-                    var menuId = this.id;
-                    console.log(menuId);
+                    var  $this = $(this),
+                        templateUrl = $this.data('cfyUrl'),
+                        menuId = this.id;
+
                     if(templateUrl !== ''){
                         $('#main').load(templateUrl + ' #content');
                     }
+
+                    //点击导航高亮的临时方案
+                    if(!$this.hasClass('active')){
+                        $('.js-menu-item,#menu').removeClass('active');
+                        $this.addClass('active');
+                    }
                 });
             });
-            //记录当前导航的位置。一级索引、二级索引
         </script>
     </body>
 </html>

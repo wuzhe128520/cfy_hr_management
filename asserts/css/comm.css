@@ -5,6 +5,9 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+.noMarginB {
+  margin-bottom: 0;
+}
 .container-fluid-addP {
   padding-right: 45px;
 }
@@ -25,8 +28,11 @@ li {
   padding-left: 30px;
   padding-right: 30px;
   background: #fff;
-  border: 1px solid red;
   border-left: 1px solid #e7e7e7;
+}
+/*=== 导航高亮 ===*/
+.sidebar-nav ul a.active {
+  background: #eee;
 }
 @media (min-width: 768px) {
   .sidebar {
